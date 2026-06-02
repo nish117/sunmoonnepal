@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japanese Language Consultancy</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span>日本語コンサルティング</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link" data-key="nav.home">Home</a>
+        <a href="#services" class="nav-link" data-key="nav.services">Services</a>
+        <a href="#gallery" class="nav-link" data-key="nav.gallery">Gallery</a>
+        <a href="#contact" class="nav-link" data-key="nav.contact">Contact</a>
+        <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">日本語</button>
+      </div>
+
+      <div class="nav-mobile">
+        <button class="lang-btn" id="langToggleMobile" onclick="toggleLanguage()">日本語</button>
+        <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Toggle menu">
+          <span class="menu-icon" id="menuIcon">&#9776;</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home" class="mobile-link" data-key="nav.home" onclick="closeMenu()">Home</a>
+      <a href="#services" class="mobile-link" data-key="nav.services" onclick="closeMenu()">Services</a>
+      <a href="#gallery" class="mobile-link" data-key="nav.gallery" onclick="closeMenu()">Gallery</a>
+      <a href="#contact" class="mobile-link" data-key="nav.contact" onclick="closeMenu()">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home">
+    <div class="swiper hero-swiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <div class="slide-text">
+                <h1 data-key="hero.title">Your Gateway to Japan</h1>
+                <p data-key="hero.subtitle">Comprehensive Japanese language education and consultation services for students and professionals. Start your journey to study or work in Japan with us.</p>
+                <div class="hero-buttons">
+                  <a href="#contact" class="btn-primary" data-key="hero.getStarted">Get Started</a>
+                  <a href="#services" class="btn-secondary" data-key="hero.learnMore">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <div class="slide-text">
+                <h1>Experience Japan's Culture</h1>
+                <p>Immerse yourself in the rich traditions and modern lifestyle of Japan</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1528360983277-13d401cdc186?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+              <div class="slide-text">
+                <h1>Learn with Expert Teachers</h1>
+                <p>Join our experienced native speakers for personalized Japanese language instruction</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section id="services" class="section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-key="services.title">Our Services</h2>
+        <p data-key="services.subtitle">Comprehensive solutions for your Japanese language and career goals</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <h3 data-key="services.study.title">Study in Japan</h3>
+          <p data-key="services.study.description">Comprehensive support for students seeking to study at Japanese universities and language schools.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+          </div>
+          <h3 data-key="services.work.title">Work Visa Support</h3>
+          <p data-key="services.work.description">Expert assistance in securing work visas and finding employment opportunities in Japan.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="23 7 16 12 23 17 23 7"/>
+              <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+            </svg>
+          </div>
+          <h3 data-key="services.online.title">Online Classes</h3>
+          <p data-key="services.online.description">Interactive online Japanese language classes with experienced native speakers.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+            </svg>
+          </div>
+          <h3 data-key="services.physical.title">Physical Classes</h3>
+          <p data-key="services.physical.description">Traditional classroom-based Japanese language instruction in a conducive learning environment.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY SECTION ===== -->
+  <section id="gallery" class="section-white">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-key="gallery.title">Video Gallery</h2>
+        <p data-key="gallery.subtitle">Learn from our educational content and success stories</p>
+      </div>
+      <div class="gallery-grid">
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/n7rQSe2ejsA" title="Basic Japanese Greetings"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info"><h3>Basic Japanese Greetings</h3></div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/5oxdPY9eH48" title="JLPT N5 Study Tips"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info"><h3>JLPT N5 Study Tips</h3></div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/6EdWg6F5bxE" title="Life in Tokyo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info"><h3>Life in Tokyo</h3></div>
+        </div>
+
+      </div>
+      <div class="section-action">
+        <a href="full-gallery.html" class="btn-primary" data-key="gallery.viewMore">View More Videos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-key="contact.title">Contact Us</h2>
+        <p data-key="contact.subtitle">Get in touch with us for any inquiries or support</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact Form -->
+        <div class="form-card">
+          <h3 data-key="contact.form.title">Send us a Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name" data-key="contact.form.name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email" data-key="contact.form.email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone" data-key="contact.form.phone">Phone</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+              <label for="message" data-key="contact.form.message">Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-block" id="submitBtn">
+              <span id="submitText" data-key="contact.form.send">Send Message</span>
+            </button>
+            <div id="formStatus" class="form-status" role="alert"></div>
+          </form>
+        </div>
+
+        <!-- Map + Contact Info -->
+        <div class="contact-right">
+          <div class="map-wrapper">
+            <iframe
+              title="Office Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754683745!2d139.7016359!3d35.6580339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2sShibuya%20Station!5e0!3m2!1sen!2sjp!4v1635744999999!5m2!1sen!2sjp"
+              width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="info-card">
+            <h3>Contact Information</h3>
+            <div class="info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+              <span>info@japaneseconsultancy.com</span>
+            </div>
+            <div class="info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.6 4.87 2 2 0 0 1 3.55 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 10a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span>+81 3-1234-5678</span>
+            </div>
+            <div class="info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Shibuya, Tokyo, Japan</span>
+            </div>
+            <div class="info-hours">
+              <h4 data-key="contact.hours">Office Hours</h4>
+              <ul>
+                <li data-key="contact.hours.weekday">Monday - Friday: 9:00 AM - 6:00 PM</li>
+                <li data-key="contact.hours.saturday">Saturday: 10:00 AM - 3:00 PM</li>
+                <li data-key="contact.hours.sunday">Sunday: Closed</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 data-key="contact.links">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home" data-key="nav.home">Home</a></li>
+            <li><a href="#services" data-key="nav.services">Services</a></li>
+            <li><a href="#gallery" data-key="nav.gallery">Gallery</a></li>
+            <li><a href="#contact" data-key="nav.contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Japanese Language Consultancy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Gallery – Japanese Language Consultancy</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .gallery-page { min-height: 100vh; background: var(--bg-light); padding-top: 80px; }
+    .gallery-page-inner { padding: 3rem 0 5rem; }
+    .gallery-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.9375rem;
+      font-weight: 500;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .full-gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    @media (min-width: 640px)  { .full-gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .full-gallery-grid { grid-template-columns: repeat(3, 1fr); } }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR (simplified for gallery page) ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html#home" class="nav-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span>日本語コンサルティング</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#home" class="nav-link" data-key="nav.home">Home</a>
+        <a href="index.html#services" class="nav-link" data-key="nav.services">Services</a>
+        <a href="index.html#gallery" class="nav-link" data-key="nav.gallery">Gallery</a>
+        <a href="index.html#contact" class="nav-link" data-key="nav.contact">Contact</a>
+        <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">日本語</button>
+      </div>
+      <div class="nav-mobile">
+        <button class="lang-btn" id="langToggleMobile" onclick="toggleLanguage()">日本語</button>
+        <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Toggle menu">
+          <span class="menu-icon" id="menuIcon">&#9776;</span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html#home" class="mobile-link" data-key="nav.home" onclick="closeMenu()">Home</a>
+      <a href="index.html#services" class="mobile-link" data-key="nav.services" onclick="closeMenu()">Services</a>
+      <a href="index.html#gallery" class="mobile-link" data-key="nav.gallery" onclick="closeMenu()">Gallery</a>
+      <a href="index.html#contact" class="mobile-link" data-key="nav.contact" onclick="closeMenu()">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ===== GALLERY PAGE ===== -->
+  <div class="gallery-page">
+    <div class="container gallery-page-inner">
+      <div class="gallery-topbar">
+        <a href="index.html#gallery" class="back-link">
+          &#8592; <span data-key="nav.gallery">Gallery</span>
+        </a>
+        <button class="lang-btn" onclick="toggleLanguage()" id="langTogglePage">日本語</button>
+      </div>
+
+      <div class="section-header">
+        <h2 data-key="gallery.title">Video Gallery</h2>
+        <p data-key="gallery.subtitle">Learn from our educational content and success stories</p>
+      </div>
+
+      <div class="full-gallery-grid">
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/n7rQSe2ejsA" title="Basic Japanese Greetings"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info"><h3>Basic Japanese Greetings</h3></div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/5oxdPY9eH48" title="JLPT N5 Study Tips"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info"><h3>JLPT N5 Study Tips</h3></div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/6EdWg6F5bxE" title="Life in Tokyo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info"><h3>Life in Tokyo</h3></div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/pSvH9vH60Ig" title="Japanese Particles Explained"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info"><h3>Japanese Particles Explained</h3></div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/mPppuDZYBzw" title="Kanji Learning Techniques"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info"><h3>Kanji Learning Techniques</h3></div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/A8jdyTbz3O4" title="Japanese Business Etiquette"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info"><h3>Japanese Business Etiquette</h3></div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/QuDgr6ot1g4" title="Japanese Pronunciation Guide"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info"><h3>Japanese Pronunciation Guide</h3></div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/3qPxV7PK7Cg" title="JLPT N4 Preparation"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info"><h3>JLPT N4 Preparation</h3></div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/YMyofREc4Zw" title="Working in Japan Tips"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info"><h3>Working in Japan Tips</h3></div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/gVyIaRz2L4c" title="Japanese Culture Insights"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info"><h3>Japanese Culture Insights</h3></div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/yExI-Q_kQNg" title="Japanese Reading Practice"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info"><h3>Japanese Reading Practice</h3></div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/NJ3JOqiXhUE" title="Living in Japan Experience"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="video-info"><h3>Living in Japan Experience</h3></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Japanese Language Consultancy. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // sync the extra lang toggle button on this page
+    document.getElementById('langTogglePage').addEventListener('click', function() {
+      this.textContent = currentLang === 'en' ? '日本語' : 'English';
+    });
+  </script>
+</body>
+</html>
