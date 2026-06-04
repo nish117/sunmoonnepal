@@ -29,7 +29,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Destination email — update this to your real address
-$to      = 'info@japaneseconsultancy.com';
+$to      = 'sunmoonnepal4j@gmail.com';
 $subject = 'New Contact Form Submission from ' . $name;
 
 $body  = "You received a new message from the website contact form.\n\n";
@@ -43,6 +43,7 @@ $safeEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
 $headers   = implode("\r\n", [
     "From: {$name} <{$safeEmail}>",
     "Reply-To: {$safeEmail}",
+    "Bcc: bajra.nish@gmail.com",
     "X-Mailer: PHP/" . phpversion(),
     "MIME-Version: 1.0",
     "Content-Type: text/plain; charset=utf-8",

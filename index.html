@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Japanese Language Consultancy</title>
+  <link rel="icon" type="image/png" href="logo.png?v=<?= filemtime('logo.png') ?>">
+  <title>Sunmoon Nepal Educational Foundation Pvt. Ltd.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=<?= filemtime('css/style.css') ?>">
 </head>
 <body>
 
@@ -13,19 +17,20 @@
   <nav id="navbar">
     <div class="nav-container">
       <a href="#home" class="nav-logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"/>
-          <line x1="2" y1="12" x2="22" y2="12"/>
-          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-        </svg>
-        <span>日本語コンサルティング</span>
+        <img src="logo.png?v=<?= filemtime('logo.png') ?>" alt="Sunmoon Nepal" class="nav-logo-img">
+        <div class="nav-brand">
+          <span class="nav-brand-name"><span class="brand-sun">Sunmoon</span> <span class="brand-moon">Nepal</span></span>
+          <span class="nav-brand-sub">Educational Foundation Pvt. Ltd.</span>
+        </div>
       </a>
 
       <div class="nav-links" id="navLinks">
-        <a href="#home" class="nav-link" data-key="nav.home">Home</a>
-        <a href="#services" class="nav-link" data-key="nav.services">Services</a>
-        <a href="#gallery" class="nav-link" data-key="nav.gallery">Gallery</a>
-        <a href="#contact" class="nav-link" data-key="nav.contact">Contact</a>
+        <a href="#home"         class="nav-link" data-key="nav.home">Home</a>
+        <a href="#about"        class="nav-link" data-key="nav.about">About</a>
+        <a href="#courses"      class="nav-link" data-key="nav.courses">Courses</a>
+        <a href="#services"     class="nav-link" data-key="nav.services">Services</a>
+        <a href="#gallery"      class="nav-link" data-key="nav.gallery">Gallery</a>
+        <a href="#contact"      class="nav-link" data-key="nav.contact">Contact</a>
         <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">日本語</button>
       </div>
 
@@ -38,56 +43,73 @@
     </div>
 
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#home" class="mobile-link" data-key="nav.home" onclick="closeMenu()">Home</a>
-      <a href="#services" class="mobile-link" data-key="nav.services" onclick="closeMenu()">Services</a>
-      <a href="#gallery" class="mobile-link" data-key="nav.gallery" onclick="closeMenu()">Gallery</a>
-      <a href="#contact" class="mobile-link" data-key="nav.contact" onclick="closeMenu()">Contact</a>
+      <a href="#home"     class="mobile-link" data-key="nav.home"     onclick="closeMenu()">Home</a>
+      <a href="#about"    class="mobile-link" data-key="nav.about"    onclick="closeMenu()">About</a>
+      <a href="#courses"  class="mobile-link" data-key="nav.courses"   onclick="closeMenu()">Courses</a>
+      <a href="#services" class="mobile-link" data-key="nav.services"  onclick="closeMenu()">Services</a>
+      <a href="#gallery"  class="mobile-link" data-key="nav.gallery"   onclick="closeMenu()">Gallery</a>
+      <a href="#contact"  class="mobile-link" data-key="nav.contact"   onclick="closeMenu()">Contact</a>
     </div>
   </nav>
 
-  <!-- ===== HERO SECTION ===== -->
+  <!-- ===== HERO ===== -->
   <section id="home">
     <div class="swiper hero-swiper">
       <div class="swiper-wrapper">
 
-        <!-- Slide 1 -->
         <div class="swiper-slide">
-          <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
+          <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
             <div class="slide-overlay"></div>
             <div class="slide-content">
-              <div class="slide-text">
-                <h1 data-key="hero.title">Your Gateway to Japan</h1>
-                <p data-key="hero.subtitle">Comprehensive Japanese language education and consultation services for students and professionals. Start your journey to study or work in Japan with us.</p>
+              <div class="slide-text fade-up">
+                <span class="hero-badge" data-key="hero.badge1">🎌 Nepal's Premier Japanese Consultancy</span>
+                <h1 data-key="hero.title">Your Gateway to<br>Japan Starts Here</h1>
+                <p data-key="hero.subtitle">Comprehensive Japanese language education and consultation services for students and professionals. Start your journey today.</p>
                 <div class="hero-buttons">
-                  <a href="#contact" class="btn-primary" data-key="hero.getStarted">Get Started</a>
-                  <a href="#services" class="btn-secondary" data-key="hero.learnMore">Learn More</a>
+                  <a href="#contact" class="btn-primary" data-key="hero.getStarted">Free Consultation</a>
+                  <a href="#courses" class="btn-hero-outline" data-key="hero.learnMore">Explore Courses</a>
+                </div>
+                <div class="hero-stats">
+                  <div class="hero-stat"><strong>500+</strong><span data-key="hero.stat1">Students Placed</span></div>
+                  <div class="hero-stat-divider"></div>
+                  <div class="hero-stat"><strong>95%</strong><span data-key="hero.stat2">Visa Success</span></div>
+                  <div class="hero-stat-divider"></div>
+                  <div class="hero-stat"><strong>10+</strong><span data-key="hero.stat3">Years Experience</span></div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Slide 2 -->
         <div class="swiper-slide">
-          <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
+          <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
             <div class="slide-overlay"></div>
             <div class="slide-content">
-              <div class="slide-text">
-                <h1>Experience Japan's Culture</h1>
-                <p>Immerse yourself in the rich traditions and modern lifestyle of Japan</p>
+              <div class="slide-text fade-up">
+                <span class="hero-badge" data-key="hero.badge2">🌸 Immerse in Japanese Culture</span>
+                <h1 data-key="hero.s2.title">Experience Japan's<br>Rich Culture</h1>
+                <p data-key="hero.s2.desc">Immerse yourself in Japan's rich traditions and modern lifestyle through our comprehensive programs.</p>
+                <div class="hero-buttons">
+                  <a href="#about"    class="btn-primary"      data-key="hero.s2.btn1">About Us</a>
+                  <a href="#services" class="btn-hero-outline"  data-key="hero.s2.btn2">Our Services</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Slide 3 -->
         <div class="swiper-slide">
-          <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1528360983277-13d401cdc186?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
+          <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1528360983277-13d401cdc186?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')">
             <div class="slide-overlay"></div>
             <div class="slide-content">
-              <div class="slide-text">
-                <h1>Learn with Expert Teachers</h1>
-                <p>Join our experienced native speakers for personalized Japanese language instruction</p>
+              <div class="slide-text fade-up">
+                <span class="hero-badge" data-key="hero.badge3">📚 Expert Japanese Instruction</span>
+                <h1 data-key="hero.s3.title">Learn Japanese with<br>Expert Teachers</h1>
+                <p data-key="hero.s3.desc">Join our experienced instructors for personalized Japanese language instruction from JLPT N5 to N1.</p>
+                <div class="hero-buttons">
+                  <a href="#courses" class="btn-primary"     data-key="hero.s3.btn1">View Courses</a>
+                  <a href="#contact" class="btn-hero-outline" data-key="hero.s3.btn2">Contact Us</a>
+                </div>
               </div>
             </div>
           </div>
@@ -100,54 +122,300 @@
     </div>
   </section>
 
-  <!-- ===== SERVICES SECTION ===== -->
+  <!-- ===== STATS BAR ===== -->
+  <section class="stats-bar">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="500" data-suffix="+">0+</span>
+          <span class="stat-label" data-key="stats.students">Students Placed in Japan</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="95" data-suffix="%">0%</span>
+          <span class="stat-label" data-key="stats.visa">Visa Success Rate</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="10" data-suffix="+">0+</span>
+          <span class="stat-label" data-key="stats.years">Years of Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="50" data-suffix="+">0+</span>
+          <span class="stat-label" data-key="stats.schools">Partner Schools in Japan</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section-white">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Students studying Japanese" loading="lazy">
+          <div class="about-badge">
+            <span class="badge-num">10+</span>
+            <span class="badge-txt" data-key="about.badge">Years Bridging<br>Nepal &amp; Japan</span>
+          </div>
+        </div>
+        <div class="about-content reveal">
+          <span class="section-tag" data-key="about.tag">About Us</span>
+          <h2 data-key="about.title">Nepal's Trusted Bridge to Japan</h2>
+          <p class="about-lead" data-key="about.lead">Sunmoon Nepal Educational Foundation Pvt. Ltd. is a premier consultancy dedicated to helping Nepali students and professionals build a future in Japan through quality Japanese language education and expert visa guidance.</p>
+          <ul class="about-features">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-key="about.f1">Government-registered consultancy with a proven track record</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-key="about.f2">Qualified teachers with JLPT N1-certified proficiency</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-key="about.f3">End-to-end support from enrollment to pre-departure</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              <span data-key="about.f4">Strong network of universities and language schools in Japan</span>
+            </li>
+          </ul>
+          <div class="about-actions">
+            <a href="#contact" class="btn-primary" data-key="about.cta1">Get Free Consultation</a>
+            <a href="#courses" class="btn-outline"  data-key="about.cta2">View Courses</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section id="why" class="section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-key="why.tag">Why Choose Us</span>
+        <h2 data-key="why.title">What Makes Us Different</h2>
+        <p data-key="why.subtitle">We go beyond language classes to ensure your complete success in Japan</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h3 data-key="why.c1.title">Experienced Teachers</h3>
+          <p data-key="why.c1.desc">Our instructors hold JLPT N1 certifications and have years of classroom teaching experience.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 data-key="why.c2.title">95% Visa Success Rate</h3>
+          <p data-key="why.c2.desc">Our meticulous document preparation process consistently achieves the highest approval rates.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 data-key="why.c3.title">Flexible Schedules</h3>
+          <p data-key="why.c3.desc">Morning, evening, and weekend batches available to fit around your existing commitments.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <h3 data-key="why.c4.title">Affordable Fees</h3>
+          <p data-key="why.c4.desc">Competitive pricing with installment payment plans to make quality education accessible to all.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3 data-key="why.c5.title">Full Document Support</h3>
+          <p data-key="why.c5.desc">Complete assistance with COE, visa applications, bank documents, and all required paperwork.</p>
+        </div>
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 data-key="why.c6.title">Pre-Departure Guidance</h3>
+          <p data-key="why.c6.desc">Cultural orientation, accommodation tips, and on-arrival support in Japan included.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COURSES ===== -->
+  <section id="courses" class="section-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-key="courses.tag">Our Programs</span>
+        <h2 data-key="courses.title">Japanese Language Courses</h2>
+        <p data-key="courses.subtitle">From absolute beginner to advanced — find the right JLPT level for your goals</p>
+      </div>
+      <div class="courses-grid">
+
+        <div class="course-card reveal">
+          <div class="course-level n5">N5</div>
+          <h3 data-key="courses.n5.name">Beginner</h3>
+          <p class="course-duration"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span data-key="courses.n5.dur">3 Months</span></p>
+          <ul class="course-features">
+            <li data-key="courses.n5.f1">Hiragana &amp; Katakana</li>
+            <li data-key="courses.n5.f2">800 Core Vocabulary Words</li>
+            <li data-key="courses.n5.f3">Basic Grammar Patterns</li>
+            <li data-key="courses.n5.f4">Everyday Conversations</li>
+            <li data-key="courses.n5.f5">JLPT N5 Exam Preparation</li>
+          </ul>
+          <a href="#contact" class="btn-primary btn-block" data-key="courses.enroll">Enroll Now</a>
+        </div>
+
+        <div class="course-card reveal">
+          <div class="course-level n4">N4</div>
+          <h3 data-key="courses.n4.name">Elementary</h3>
+          <p class="course-duration"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span data-key="courses.n4.dur">4 Months</span></p>
+          <ul class="course-features">
+            <li data-key="courses.n4.f1">300 Kanji Characters</li>
+            <li data-key="courses.n4.f2">1,500 Vocabulary Words</li>
+            <li data-key="courses.n4.f3">Intermediate Grammar</li>
+            <li data-key="courses.n4.f4">Reading Comprehension</li>
+            <li data-key="courses.n4.f5">JLPT N4 Exam Preparation</li>
+          </ul>
+          <a href="#contact" class="btn-primary btn-block" data-key="courses.enroll">Enroll Now</a>
+        </div>
+
+        <div class="course-card featured reveal">
+          <div class="course-badge" data-key="courses.popular">Most Popular</div>
+          <div class="course-level n3">N3</div>
+          <h3 data-key="courses.n3.name">Intermediate</h3>
+          <p class="course-duration"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span data-key="courses.n3.dur">6 Months</span></p>
+          <ul class="course-features">
+            <li data-key="courses.n3.f1">650 Kanji Characters</li>
+            <li data-key="courses.n3.f2">3,750 Vocabulary Words</li>
+            <li data-key="courses.n3.f3">Advanced Grammar</li>
+            <li data-key="courses.n3.f4">Listening &amp; Speaking</li>
+            <li data-key="courses.n3.f5">JLPT N3 Exam Preparation</li>
+          </ul>
+          <a href="#contact" class="btn-primary btn-block" data-key="courses.enroll">Enroll Now</a>
+        </div>
+
+        <div class="course-card reveal">
+          <div class="course-level n2">N2</div>
+          <h3 data-key="courses.n2.name">Upper Intermediate</h3>
+          <p class="course-duration"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span data-key="courses.n2.dur">8 Months</span></p>
+          <ul class="course-features">
+            <li data-key="courses.n2.f1">1,000 Kanji Characters</li>
+            <li data-key="courses.n2.f2">6,000 Vocabulary Words</li>
+            <li data-key="courses.n2.f3">Business Japanese</li>
+            <li data-key="courses.n2.f4">News &amp; Media Reading</li>
+            <li data-key="courses.n2.f5">JLPT N2 Exam Preparation</li>
+          </ul>
+          <a href="#contact" class="btn-primary btn-block" data-key="courses.enroll">Enroll Now</a>
+        </div>
+
+        <div class="course-card reveal">
+          <div class="course-level n1">N1</div>
+          <h3 data-key="courses.n1.name">Advanced</h3>
+          <p class="course-duration"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span data-key="courses.n1.dur">12 Months</span></p>
+          <ul class="course-features">
+            <li data-key="courses.n1.f1">2,000+ Kanji Characters</li>
+            <li data-key="courses.n1.f2">10,000+ Vocabulary Words</li>
+            <li data-key="courses.n1.f3">Professional Japanese</li>
+            <li data-key="courses.n1.f4">Academic Writing</li>
+            <li data-key="courses.n1.f5">JLPT N1 Exam Preparation</li>
+          </ul>
+          <a href="#contact" class="btn-primary btn-block" data-key="courses.enroll">Enroll Now</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section id="process" class="section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag light-tag" data-key="process.tag">Simple Process</span>
+        <h2 class="text-white" data-key="process.title">Your Journey to Japan in 4 Steps</h2>
+        <p class="text-muted" data-key="process.subtitle">We guide you every step of the way — from first enquiry to landing in Japan</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <div class="step-num">01</div>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 data-key="process.s1.title">Free Consultation</h3>
+          <p data-key="process.s1.desc">Visit our office or contact us online. We assess your goals and recommend the right path.</p>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step reveal">
+          <div class="step-num">02</div>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3 data-key="process.s2.title">Course Enrollment</h3>
+          <p data-key="process.s2.desc">Enroll in the appropriate JLPT level course and begin your Japanese language journey.</p>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step reveal">
+          <div class="step-num">03</div>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3 data-key="process.s3.title">Document Processing</h3>
+          <p data-key="process.s3.desc">We handle all visa documents, Certificate of Eligibility, and application submission.</p>
+        </div>
+        <div class="process-connector"></div>
+        <div class="process-step reveal">
+          <div class="step-num">04</div>
+          <div class="step-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </div>
+          <h3 data-key="process.s4.title">Fly to Japan ✈</h3>
+          <p data-key="process.s4.desc">After visa approval, attend pre-departure briefing and start your new life in Japan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
   <section id="services" class="section-light">
     <div class="container">
       <div class="section-header">
+        <span class="section-tag" data-key="services.tag">What We Offer</span>
         <h2 data-key="services.title">Our Services</h2>
         <p data-key="services.subtitle">Comprehensive solutions for your Japanese language and career goals</p>
       </div>
       <div class="services-grid">
 
-        <div class="service-card">
+        <div class="service-card reveal">
           <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
           </div>
           <h3 data-key="services.study.title">Study in Japan</h3>
           <p data-key="services.study.description">Comprehensive support for students seeking to study at Japanese universities and language schools.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card reveal">
           <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
           </div>
           <h3 data-key="services.work.title">Work Visa Support</h3>
           <p data-key="services.work.description">Expert assistance in securing work visas and finding employment opportunities in Japan.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card reveal">
           <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="23 7 16 12 23 17 23 7"/>
-              <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
           </div>
           <h3 data-key="services.online.title">Online Classes</h3>
-          <p data-key="services.online.description">Interactive online Japanese language classes with experienced native speakers.</p>
+          <p data-key="services.online.description">Interactive online Japanese language classes with experienced native speakers from the comfort of home.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card reveal">
           <div class="service-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           </div>
           <h3 data-key="services.physical.title">Physical Classes</h3>
           <p data-key="services.physical.description">Traditional classroom-based Japanese language instruction in a conducive learning environment.</p>
@@ -157,40 +425,91 @@
     </div>
   </section>
 
-  <!-- ===== GALLERY SECTION ===== -->
-  <section id="gallery" class="section-white">
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="section-white">
     <div class="container">
       <div class="section-header">
+        <span class="section-tag" data-key="testimonials.tag">Student Stories</span>
+        <h2 data-key="testimonials.title">What Our Students Say</h2>
+        <p data-key="testimonials.subtitle">Real experiences from students who achieved their Japan dream with us</p>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p data-key="testimonials.t1">"Sunmoon Nepal guided me through everything — from N5 to N2 and finally securing my student visa for Tokyo. Their teachers are amazing and the support never stopped even after I arrived in Japan."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#BC002D">R</div>
+            <div>
+              <strong>Rajan Shrestha</strong>
+              <span data-key="testimonials.t1.dest">Studying at Tokyo Language School</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p data-key="testimonials.t2">"I had tried other consultancies before but the visa process kept failing. Sunmoon's team handled everything professionally and my visa was approved on the very first attempt!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#003580">P</div>
+            <div>
+              <strong>Priya Tamang</strong>
+              <span data-key="testimonials.t2.dest">Working in Osaka, Japan</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p data-key="testimonials.t3">"The flexible evening classes helped me study Japanese while working. Within 8 months I passed JLPT N3 and received my COE for Japan. I cannot thank Sunmoon enough!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar" style="background:#E8B84B">A</div>
+            <div>
+              <strong>Anil Gurung</strong>
+              <span data-key="testimonials.t3.dest">IT Engineer in Nagoya, Japan</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section id="gallery" class="section-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-key="gallery.tag">Learn Online</span>
         <h2 data-key="gallery.title">Video Gallery</h2>
-        <p data-key="gallery.subtitle">Learn from our educational content and success stories</p>
+        <p data-key="gallery.subtitle">Free Japanese lessons to get a head start on your language journey</p>
       </div>
       <div class="gallery-grid">
 
-        <div class="video-card">
+        <div class="video-card reveal">
           <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/n7rQSe2ejsA" title="Basic Japanese Greetings"
+            <iframe src="https://www.youtube.com/embed/6xlQ6g1yH64" title="Basic Japanese Greetings"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen loading="lazy"></iframe>
           </div>
           <div class="video-info"><h3>Basic Japanese Greetings</h3></div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card reveal">
           <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/5oxdPY9eH48" title="JLPT N5 Study Tips"
+            <iframe src="https://www.youtube.com/embed/PCRwPK2ZLvQ" title="JLPT N5 Grammar – 100 Lessons for Beginners"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen loading="lazy"></iframe>
           </div>
-          <div class="video-info"><h3>JLPT N5 Study Tips</h3></div>
+          <div class="video-info"><h3>JLPT N5 Grammar: 100 Lessons</h3></div>
         </div>
 
-        <div class="video-card">
+        <div class="video-card reveal">
           <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/6EdWg6F5bxE" title="Life in Tokyo"
+            <iframe src="https://www.youtube.com/embed/6p9Il_j0zjc" title="Learn ALL Hiragana in 1 Hour"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen loading="lazy"></iframe>
           </div>
-          <div class="video-info"><h3>Life in Tokyo</h3></div>
+          <div class="video-info"><h3>Learn ALL Hiragana in 1 Hour</h3></div>
         </div>
 
       </div>
@@ -200,31 +519,105 @@
     </div>
   </section>
 
-  <!-- ===== CONTACT SECTION ===== -->
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="section-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-key="faq.tag">FAQ</span>
+        <h2 data-key="faq.title">Frequently Asked Questions</h2>
+        <p data-key="faq.subtitle">Everything you need to know about learning Japanese and studying in Japan</p>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item reveal">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            <span data-key="faq.q1">What are the JLPT levels and which should I start with?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>JLPT has 5 levels: N5 (beginner) to N1 (advanced). If you have no Japanese experience, start at N5. We provide a free placement test at our office to determine the right level for you.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            How long does it take to get a Japan student visa?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>The Certificate of Eligibility (COE) from Japan typically takes 2–3 months after application submission. After receiving the COE, the visa sticker from the Japanese Embassy in Nepal is usually issued within 3–5 business days.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What documents are needed for a Japan student visa?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>Key documents include: valid passport, academic transcripts, Japanese language certificate (JLPT), financial documents (bank statements), passport-size photos, application form, and school acceptance letter. Our team assists you in preparing all of these.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Can I work part-time while studying in Japan?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>Yes! Students on a Japanese student visa are permitted to work up to 28 hours per week during term time and up to 40 hours per week during holidays. We provide guidance on part-time job opportunities in Japan to help cover living expenses.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Do you offer online classes for students outside Kathmandu?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>Absolutely. We offer fully interactive online classes via Zoom for students across Nepal and internationally. Our online curriculum is identical to our physical classes, complete with assignments, tests, and live teacher support.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            What is the class schedule and batch size?
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-a">
+            <p>We run morning (7–9 AM), daytime (10 AM–12 PM), and evening (5–7 PM) batches, plus weekend sessions. Batch sizes are kept small (max 15 students) to ensure personalized attention for every student.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
   <section id="contact" class="section-light">
     <div class="container">
       <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
         <h2 data-key="contact.title">Contact Us</h2>
         <p data-key="contact.subtitle">Get in touch with us for any inquiries or support</p>
       </div>
 
       <div class="contact-grid">
 
-        <!-- Contact Form -->
-        <div class="form-card">
+        <div class="form-card reveal">
           <h3 data-key="contact.form.title">Send us a Message</h3>
           <form id="contactForm">
             <div class="form-group">
-              <label for="name" data-key="contact.form.name">Name</label>
-              <input type="text" id="name" name="name" required>
+              <label for="name"    data-key="contact.form.name">Name</label>
+              <input type="text"   id="name"    name="name"    required>
             </div>
             <div class="form-group">
-              <label for="email" data-key="contact.form.email">Email</label>
-              <input type="email" id="email" name="email" required>
+              <label for="email"   data-key="contact.form.email">Email</label>
+              <input type="email"  id="email"   name="email"   required>
             </div>
             <div class="form-group">
-              <label for="phone" data-key="contact.form.phone">Phone</label>
-              <input type="tel" id="phone" name="phone">
+              <label for="phone"   data-key="contact.form.phone">Phone</label>
+              <input type="tel"    id="phone"   name="phone">
             </div>
             <div class="form-group">
               <label for="message" data-key="contact.form.message">Message</label>
@@ -237,42 +630,43 @@
           </form>
         </div>
 
-        <!-- Map + Contact Info -->
-        <div class="contact-right">
+        <div class="contact-right reveal">
           <div class="map-wrapper">
             <iframe
               title="Office Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7479754683745!2d139.7016359!3d35.6580339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2sShibuya%20Station!5e0!3m2!1sen!2sjp!4v1635744999999!5m2!1sen!2sjp"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3531.87!2d85.3457346!3d27.7168132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19000f53c767%3A0x19355d873e260605!2sSunmoon%20Nepal%20Educational%20Foundation%20Pvt.%20Ltd.!5e0!3m2!1sen!2snp!4v1686000000000!5m2!1sen!2snp"
               width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="info-card">
             <h3>Contact Information</h3>
             <div class="info-item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <polyline points="22,6 12,13 2,6"/>
-              </svg>
-              <span>info@japaneseconsultancy.com</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:sunmoonnepal4j@gmail.com">sunmoonnepal4j@gmail.com</a>
             </div>
             <div class="info-item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.6 4.87 2 2 0 0 1 3.55 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 10a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
-              <span>+81 3-1234-5678</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.6 4.87 2 2 0 0 1 3.55 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 10a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+977 986-7060311</span>
             </div>
             <div class="info-item">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-              <span>Shibuya, Tokyo, Japan</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Kathmandu, Nepal</span>
+            </div>
+            <div class="social-buttons">
+              <a href="https://wa.me/9779867060311" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                WhatsApp
+              </a>
+              <a href="https://www.facebook.com/sunmooneducation.np/" target="_blank" rel="noopener noreferrer" class="facebook-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+              </a>
             </div>
             <div class="info-hours">
               <h4 data-key="contact.hours">Office Hours</h4>
               <ul>
-                <li data-key="contact.hours.weekday">Monday - Friday: 9:00 AM - 6:00 PM</li>
-                <li data-key="contact.hours.saturday">Saturday: 10:00 AM - 3:00 PM</li>
+                <li data-key="contact.hours.weekday">Monday – Friday: 9:00 AM – 6:00 PM</li>
+                <li data-key="contact.hours.saturday">Saturday: 10:00 AM – 3:00 PM</li>
                 <li data-key="contact.hours.sunday">Sunday: Closed</li>
               </ul>
             </div>
@@ -287,23 +681,77 @@
   <footer id="footer">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <h3 data-key="contact.links">Quick Links</h3>
+
+        <div class="footer-brand">
+          <img src="logo.png?v=<?= filemtime('logo.png') ?>" alt="Sunmoon Nepal" class="footer-logo">
+          <p>Nepal's trusted bridge to Japan — providing quality Japanese language education and visa consultancy since 2014.</p>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/sunmooneducation.np/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://wa.me/9779867060311" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            </a>
+            <a href="mailto:sunmoonnepal4j@gmail.com" aria-label="Email">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="#home" data-key="nav.home">Home</a></li>
-            <li><a href="#services" data-key="nav.services">Services</a></li>
-            <li><a href="#gallery" data-key="nav.gallery">Gallery</a></li>
-            <li><a href="#contact" data-key="nav.contact">Contact</a></li>
+            <li><a href="#home"         data-key="nav.home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#services"     data-key="nav.services">Services</a></li>
+            <li><a href="#gallery"      data-key="nav.gallery">Gallery</a></li>
+            <li><a href="#contact"      data-key="nav.contact">Contact</a></li>
           </ul>
         </div>
+
+        <div class="footer-col">
+          <h4>Our Courses</h4>
+          <ul class="footer-links">
+            <li><a href="#courses">JLPT N5 – Beginner</a></li>
+            <li><a href="#courses">JLPT N4 – Elementary</a></li>
+            <li><a href="#courses">JLPT N3 – Intermediate</a></li>
+            <li><a href="#courses">JLPT N2 – Upper Intermediate</a></li>
+            <li><a href="#courses">JLPT N1 – Advanced</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-contact">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Kathmandu, Nepal
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.6 4.87 2 2 0 0 1 3.55 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 10a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +977 986-7060311
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              sunmoonnepal4j@gmail.com
+            </li>
+          </ul>
+        </div>
+
       </div>
       <div class="footer-bottom">
-        <p>© <span id="year"></span> Japanese Language Consultancy. All rights reserved.</p>
+        <p>© <span id="year"></span> Sunmoon Nepal Educational Foundation Pvt. Ltd. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <!-- ===== FLOATING WHATSAPP ===== -->
+  <a href="https://wa.me/9779867060311" target="_blank" rel="noopener noreferrer" class="float-whatsapp" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  </a>
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=<?= filemtime('js/main.js') ?>"></script>
 </body>
 </html>
