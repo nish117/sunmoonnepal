@@ -535,57 +535,57 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-a">
-            <p>JLPT has 5 levels: N5 (beginner) to N1 (advanced). If you have no Japanese experience, start at N5. We provide a free placement test at our office to determine the right level for you.</p>
+            <p data-key="faq.a1">JLPT has 5 levels: N5 (beginner) to N1 (advanced). If you have no Japanese experience, start at N5. We provide a free placement test at our office to determine the right level for you.</p>
           </div>
         </div>
 
         <div class="faq-item reveal">
           <button class="faq-q" onclick="toggleFaq(this)">
-            How long does it take to get a Japan student visa?
+            <span data-key="faq.q2">How long does it take to get a Japan student visa?</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-a">
-            <p>The Certificate of Eligibility (COE) from Japan typically takes 2–3 months after application submission. After receiving the COE, the visa sticker from the Japanese Embassy in Nepal is usually issued within 3–5 business days.</p>
+            <p data-key="faq.a2">The Certificate of Eligibility (COE) from Japan typically takes 2–3 months after application submission. After receiving the COE, the visa sticker from the Japanese Embassy in Nepal is usually issued within 3–5 business days.</p>
           </div>
         </div>
 
         <div class="faq-item reveal">
           <button class="faq-q" onclick="toggleFaq(this)">
-            What documents are needed for a Japan student visa?
+            <span data-key="faq.q3">What documents are needed for a Japan student visa?</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-a">
-            <p>Key documents include: valid passport, academic transcripts, Japanese language certificate (JLPT), financial documents (bank statements), passport-size photos, application form, and school acceptance letter. Our team assists you in preparing all of these.</p>
+            <p data-key="faq.a3">Key documents include: valid passport, academic transcripts, Japanese language certificate (JLPT), financial documents (bank statements), passport-size photos, application form, and school acceptance letter. Our team assists you in preparing all of these.</p>
           </div>
         </div>
 
         <div class="faq-item reveal">
           <button class="faq-q" onclick="toggleFaq(this)">
-            Can I work part-time while studying in Japan?
+            <span data-key="faq.q4">Can I work part-time while studying in Japan?</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-a">
-            <p>Yes! Students on a Japanese student visa are permitted to work up to 28 hours per week during term time and up to 40 hours per week during holidays. We provide guidance on part-time job opportunities in Japan to help cover living expenses.</p>
+            <p data-key="faq.a4">Yes! Students on a Japanese student visa are permitted to work up to 28 hours per week during term time and up to 40 hours per week during holidays. We provide guidance on part-time job opportunities in Japan to help cover living expenses.</p>
           </div>
         </div>
 
         <div class="faq-item reveal">
           <button class="faq-q" onclick="toggleFaq(this)">
-            Do you offer online classes for students outside Kathmandu?
+            <span data-key="faq.q5">Do you offer online classes for students outside Kathmandu?</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-a">
-            <p>Absolutely. We offer fully interactive online classes via Zoom for students across Nepal and internationally. Our online curriculum is identical to our physical classes, complete with assignments, tests, and live teacher support.</p>
+            <p data-key="faq.a5">Absolutely. We offer fully interactive online classes via Zoom for students across Nepal and internationally. Our online curriculum is identical to our physical classes, complete with assignments, tests, and live teacher support.</p>
           </div>
         </div>
 
         <div class="faq-item reveal">
           <button class="faq-q" onclick="toggleFaq(this)">
-            What is the class schedule and batch size?
+            <span data-key="faq.q6">What is the class schedule and batch size?</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-a">
-            <p>We run morning (7–9 AM), daytime (10 AM–12 PM), and evening (5–7 PM) batches, plus weekend sessions. Batch sizes are kept small (max 15 students) to ensure personalized attention for every student.</p>
+            <p data-key="faq.a6">We run morning (7–9 AM), daytime (10 AM–12 PM), and evening (5–7 PM) batches, plus weekend sessions. Batch sizes are kept small (max 15 students) to ensure personalized attention for every student.</p>
           </div>
         </div>
 
@@ -609,19 +609,24 @@
           <form id="contactForm">
             <div class="form-group">
               <label for="name"    data-key="contact.form.name">Name</label>
-              <input type="text"   id="name"    name="name"    required>
+              <input type="text"   id="name"    name="name"    maxlength="100" required>
             </div>
             <div class="form-group">
               <label for="email"   data-key="contact.form.email">Email</label>
-              <input type="email"  id="email"   name="email"   required>
+              <input type="email"  id="email"   name="email"   maxlength="254" required>
             </div>
             <div class="form-group">
               <label for="phone"   data-key="contact.form.phone">Phone</label>
-              <input type="tel"    id="phone"   name="phone">
+              <input type="tel"    id="phone"   name="phone"   maxlength="30">
             </div>
             <div class="form-group">
               <label for="message" data-key="contact.form.message">Message</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
+              <textarea id="message" name="message" rows="4" maxlength="5000" required></textarea>
+            </div>
+            <!-- Honeypot: hidden from users, bots tend to fill it -->
+            <div style="position:absolute;left:-9999px;" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
             </div>
             <button type="submit" class="btn-primary btn-block" id="submitBtn">
               <span id="submitText" data-key="contact.form.send">Send Message</span>
@@ -642,7 +647,7 @@
             <h3>Contact Information</h3>
             <div class="info-item">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              <a href="mailto:sunmoonnepal4j@gmail.com">sunmoonnepal4j@gmail.com</a>
+              <a href="mailto:infosunmooneparu@gmail.com">infosunmooneparu@gmail.com</a>
             </div>
             <div class="info-item">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.6 4.87 2 2 0 0 1 3.55 2.68h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 10a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>

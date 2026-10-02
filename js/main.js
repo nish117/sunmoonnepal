@@ -531,9 +531,14 @@ function initContactForm() {
         statusEl.textContent = t('contact.form.success');
         statusEl.className   = 'form-status success';
         form.reset();
-      } else { throw new Error(json.message || 'Server error'); }
-    } catch {
-      statusEl.textContent = t('contact.form.error');
+      } else {
+        // 422 = validation error: show the server's specific reason
+        const err = new Error(json.message || 'Server error');
+        err.userMessage = res.status === 422 ? json.message : null;
+        throw err;
+      }
+    } catch (err) {
+      statusEl.textContent = err.userMessage || t('contact.form.error');
       statusEl.className   = 'form-status error';
     } finally {
       submitBtn.disabled = false;

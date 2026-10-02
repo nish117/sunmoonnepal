@@ -1,0 +1,2 @@
+# Library files are only included by send_mail.php — never served directly
+Require all denied
